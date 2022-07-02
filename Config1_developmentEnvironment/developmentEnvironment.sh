@@ -1,7 +1,8 @@
 #!/bin/bash
 
 developmentAppsInstall() {
-	aptInstall git build-essential vim gh
+	aptInstall git build-essential vim gh \
+		neofetch
 }
 
 echo "developmentAppsInstall --> installs git, base-devel, vim etc"
@@ -17,6 +18,8 @@ vimPluginInstall() {
 
 
 echo "vimPluginInstall --> installs various vim plugins"
+
+
 
 aptInstall() {
 	apt install $@ -y
