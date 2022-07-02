@@ -8,8 +8,6 @@ echo "developmentAppsInstall --> installs git, base-devel, vim etc"
 
 vimPluginInstall() {
 	aptInstall vim-youcompleteme \
-		vim-ultisnips \
-		vim-snippets \
 		vim-syntastic \
 		vim-tabular \
 		vim-gitgutter \
