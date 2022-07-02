@@ -19,6 +19,7 @@ salomePrereqsInstall () {
 	aptInstall libqt5printsupport5 libqt5test5 libqt5x11extras5-dev 
 	aptInstall libqt5help5 libfreeimage-dev libxmu-dev libtbb-dev liblapack-dev 
 	aptInstall python3-sip python3-pyqt5 
+	pip install psutil omnipy 
 }
 
 echo "salomePrereqsInstall --> installs preqrequisites for salome"
