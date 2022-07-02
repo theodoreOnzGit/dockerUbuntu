@@ -6,8 +6,21 @@ developmentAppsInstall() {
 
 echo "developmentAppsInstall --> installs git, base-devel, vim etc"
 
+vimPluginInstall() {
+	aptInstall vim-youcompleteme \
+		vim-ultisnips \
+		vim-snippets \
+		vim-syntastic \
+		vim-tabular \
+		vim-gitgutter \
+		vim-ctrlp
+}
+
+echo "vimPluginInstall --> installs various vim plugins"
+
 aptInstall() {
 	apt install $@ -y
 }
 echo "aptInstall [apps] --> installs apps from aptitude with -y flag"
+
 
