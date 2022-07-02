@@ -1,7 +1,7 @@
 #!/bin/bash
 
 developmentAppsInstall() {
-	aptInstall git base-devel vim
+	aptInstall git build-essential vim gh
 }
 
 echo "developmentAppsInstall --> installs git, base-devel, vim etc"
