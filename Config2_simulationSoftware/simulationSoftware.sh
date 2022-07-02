@@ -13,13 +13,24 @@ openfoamInstall () {
 
 echo "openfoamInstall --> installs openfoam and prereqs"
 
-salomeInstall () {
+salomePrereqsInstall () {
 	aptInstall build-essential 
 	aptInstall pip libboost-all-dev libqwt-qt5-dev libglu1-mesa-dev 
 	aptInstall libqt5printsupport5 libqt5test5 libqt5x11extras5-dev 
 	aptInstall libqt5help5 libfreeimage-dev libxmu-dev libtbb-dev liblapack-dev 
 	aptInstall python3-sip python3-pyqt5 
 }
+
+echo "salomePrereqsInstall --> installs preqrequisites for salome"
+
+salome990Install () {
+	salomePrereqsInstall
+	wget https://files.salome-platform.org/Salome/Salome9.9.0/SALOME-9.9.0-native-UB20.04-SRC.tar.gz
+}
+
+
+echo "salome990Install --> downloads salome 9.9.0 tar gz file with wget"
+echo "then extracts it"
 
 aptInstall() {
 	apt install $@ -y
