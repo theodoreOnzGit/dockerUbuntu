@@ -21,6 +21,8 @@ endif
 call plug#begin()
     Plug 'preservim/nerdtree'
 	Plug 'morhetz/gruvbox'
+	Plug 'bling/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 ""gruvbox
@@ -30,10 +32,13 @@ color gruvbox
 "" Nerdtree settings if you want to enable them
 let NERDTreeShowHidden=1
 autocmd VimEnter * NERDTree | set number |set relativenumber| wincmd l | wincmd l
-
+" vim airline theme
+let g:airline_theme='dark'
 
 let g:UltiSnipsExpandTrigger="<F4>"
 
 vsplit
 terminal
 PlugInstall
+
+
