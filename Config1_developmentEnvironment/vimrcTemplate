@@ -9,12 +9,7 @@ filetype plugin indent on
 filetype indent on 
 
 
-""gruvbox
-"color gruvbox
 
-"" Nerdtree settings if you want to enable them
-"let NERDTreeShowHidden=1
-"autocmd VimEnter * NERDTree | set number |set relativenumber| wincmd l | wincmd l
 
 " vim plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -25,7 +20,17 @@ endif
 
 call plug#begin()
     Plug 'preservim/nerdtree'
+	Plug 'morhetz/gruvbox'
 call plug#end()
+
+""gruvbox
+set background=dark
+set termguicolors
+color gruvbox
+"" Nerdtree settings if you want to enable them
+let NERDTreeShowHidden=1
+autocmd VimEnter * NERDTree | set number |set relativenumber| wincmd l | wincmd l
+
 
 let g:UltiSnipsExpandTrigger="<F4>"
 
