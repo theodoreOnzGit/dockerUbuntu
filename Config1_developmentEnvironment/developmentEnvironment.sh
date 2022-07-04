@@ -13,11 +13,18 @@ vimPluginInstall() {
 		vim-tabular \
 		vim-gitgutter \
 		vim-ctrlp
+	
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	rm -rf ~/.vimrc
+	cp vimrcTemplate ~/.vimrc
 }
 
 
 
 echo "vimPluginInstall --> installs various vim plugins"
+echo "also brings the vimrc into the ~/.vimrc directory"
+echo " "
 
 
 
