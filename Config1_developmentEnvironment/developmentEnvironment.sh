@@ -26,6 +26,15 @@ echo "vimPluginInstall --> installs various vim plugins"
 echo "also brings the vimrc into the ~/.vimrc directory"
 echo " "
 
+powerlineInstall() {
+	aptInstall powerline fonts-powerline \
+		powerline-gitstatus \
+		powerline-doc
+}
+
+echo "powerlineInstall --> installs powerline and fonts"
+echo "useful for the symbols and powerlevel10k"
+
 
 
 aptInstall() {
